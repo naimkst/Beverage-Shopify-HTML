@@ -1,0 +1,278 @@
+@font-face {
+    font-family: 'Gill Sans Nova Ultra';
+    src: url('GillSansNova-UltraBold.woff2') format('woff2'),
+        url('GillSansNova-UltraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans Nova Cond Ultra';
+    src: url('GillSansNova-CondUltraBold.woff2') format('woff2'),
+        url('GillSansNova-CondUltraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+// color
+$dark-gray: #010924; //
+$body-color: #010924;
+$white: #fff;
+$light: #DDDDDD; //
+$black: #2F2F31;
+$small-black: #333;
+$cyan: #F9F9F9; //
+$section-bg: #00522e; //
+
+$theme-primary-color: #df8e0a; //
+$body-bg-color: #fff;
+$section-bg-color: #F5F5F5; //
+$text-color: #606060; //
+$text-light-color: #6F6F6F; //
+$heading-color: $dark-gray;
+$border-color: #222224; //
+$border-color-s2: #F1E2CC; //
+
+
+$base-font: 'Gill Sans Nova Ultra';
+$heading-font: 'Gill Sans Nova Ultra';
+
+
+:root {
+    scroll-behavior: unset;
+}
+
+body {
+    margin: 0;
+}
+
+
+// comming-soon-area
+
+.comming-soon-area {
+    background: $section-bg;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    @media(max-width:575px) {
+        min-height: 400px;
+    }
+
+
+
+    h1 {
+        margin: 0;
+        font-size: 200px;
+        color: $white;
+        font-family: $heading-font;
+        text-transform: uppercase;
+        line-height: 200px;
+        position: relative;
+
+        @media(max-width:991px) {
+            font-size: 150px;
+            line-height: 150px;
+        }
+
+        @media(max-width:767px) {
+            font-size: 120px;
+            line-height: 120px;
+        }
+
+        @media(max-width:575px) {
+            font-size: 80px;
+            line-height: 80px;
+        }
+        @media(max-width:440px) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        .shape1 {
+            position: absolute;
+            left: -90px;
+            top: -105px;
+            animation: zoom-in-zoom-out 4s ease-in infinite;
+
+            @media(max-width:767px) {
+                left: -64px;
+                top: -64px;
+            }
+
+            @media(max-width:440px) {
+                left: -45px;
+                top: -45px;
+            }
+
+            img {
+                @media(max-width:767px) {
+                    max-width: 120px;
+                }
+
+                @media(max-width:440px) {
+                    max-width: 80px;
+                }
+            }
+        }
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 120px;
+        color: $white;
+        font-family: $heading-font;
+        text-transform: uppercase;
+
+        @media(max-width:991px) {
+            font-size: 90px;
+            line-height: 90px;
+        }
+
+        @media(max-width:767px) {
+            font-size: 70px;
+            line-height: 70px;
+        }
+
+        @media(max-width:575px) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        @media(max-width:440px) {
+            font-size: 35px;
+            line-height: 35px;
+        }
+
+
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 80px;
+        color: $theme-primary-color;
+        font-family: $heading-font;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        @media(max-width:991px) {
+            font-size: 60px;
+            line-height: 60px;
+        }
+
+        @media(max-width:767px) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        @media(max-width:575px) {
+            font-size: 35px;
+            line-height: 35px;
+        }
+        @media(max-width:440px) {
+            font-size: 25px;
+            line-height: 25px;
+        }
+
+        .shape2 {
+            position: relative;
+            top: 20px;
+            padding-left: 15px;
+            animation: zoom-in-zoom-out 4s ease-in infinite;
+
+            img {
+                @media(max-width:575px) {
+                    max-width: 60px;
+                }
+                @media(max-width:440px) {
+                    max-width: 40px;
+                }
+            }
+        }
+    }
+
+    .right-shape {
+        position: absolute;
+        right: 0;
+        top: 80px;
+        z-index: -1;
+
+        img {
+            animation: leafAniamtion 8s ease-in infinite;
+
+            @media(max-width:767px) {
+                max-width: 130px;
+            }
+        }
+    }
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes kenburn {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    to {
+        -webkit-transform: scale3d(1.2, 1.2, 1.2);
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+}
+
+@keyframes leafAniamtion {
+
+    0%,
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+
+    50% {
+        transform: rotate(5deg) translateX(20px);
+    }
+}
+
+
+@-webkit-keyframes zoom-in-zoom-out {
+    0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}
