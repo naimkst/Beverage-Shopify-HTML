@@ -170,6 +170,100 @@
         return false;
     })
 
+    /*-----------------------
+       cart-plus-minus-button 
+     -------------------------*/
+     $(".cart-plus-minus").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
+     $(".qtybutton").on("click", function () {
+         var $button = $(this);
+         var oldValue = $button.parent().find("input").val();
+         if ($button.text() == "+") {
+             var newVal = parseFloat(oldValue) + 1;
+         } else {
+             // Don't allow decrementing below zero
+             if (oldValue > 0) {
+                 var newVal = parseFloat(oldValue) - 1;
+             } else {
+                 newVal = 0;
+             }
+         }
+         $button.parent().find("input").val(newVal);
+     });
+ 
+      // Single gallery slider
+      function productGallary() {
+         if ($('.product-active').length && $('.product-thumbnil-active').length) {
+ 
+             var $sync1 = $(".product-active"),
+                 $sync2 = $(".product-thumbnil-active"),
+                 flag = false,
+                 duration = 500;
+ 
+             $sync1
+                 .owlCarousel({
+                     items: 1,
+                     margin: 0,
+                     nav: true,
+                     navText: ['<i class="ti-arrow-left"></i>', '<i class="ti-arrow-right"></i>'],
+                     dots: false
+                 })
+                 .on('changed.owl.carousel', function(e) {
+                     if (!flag) {
+                         flag = true;
+                         $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                         flag = false;
+                     }
+                 });
+ 
+             $sync2
+                 .owlCarousel({
+                     margin: 10,
+                     items: 3,
+                     nav: false,
+                     dots: false,
+                     center: false,
+                     responsive: {
+                         0: {
+                             items: 2,
+                             autoWidth: false
+                         },
+                         400: {
+                             items: 3,
+                             autoWidth: false
+                         },
+                         500: {
+                             items: 3,
+                             center: false,
+                             autoWidth: false
+                         },
+                         600: {
+                             items: 3,
+                             autoWidth: false
+                         },
+                         1200: {
+                             items: 3,
+                             autoWidth: false
+                         }
+                     },
+                 })
+                 .on('click', '.owl-item', function() {
+                     $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+ 
+                 })
+                 .on('changed.owl.carousel', function(e) {
+                     if (!flag) {
+                         flag = true;
+                         $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                         flag = false;
+                     }
+                 });
+ 
+         };
+     }
+ 
+     productGallary();
+ 
+
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/

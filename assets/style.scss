@@ -868,6 +868,10 @@ img {
 					padding: 0;
 					padding-bottom: 20px;
 
+					img {
+						max-width: 180px;
+					}
+
 					a {
 						&:before {
 							display: none;
@@ -1753,7 +1757,7 @@ img {
 			animation: bounce 3s linear infinite;
 
 			img {
-				width: 600px;
+				width: 650px;
 			}
 		}
 
@@ -1770,7 +1774,6 @@ img {
 
 			img {
 				width: 100px;
-				animation: leafAniamtion 8s ease-in infinite;
 			}
 		}
 
@@ -1858,6 +1861,9 @@ img {
 
 			.features-img {
 				margin-bottom: 20px;
+				img {
+					max-width: 280px;
+				}
 			}
 
 			.features-text {
@@ -1890,8 +1896,7 @@ img {
 			}
 
 			img {
-				background: $white;
-				border-radius: 50%;
+				max-width: 100px;
 			}
 		}
 
@@ -1906,8 +1911,7 @@ img {
 			}
 
 			img {
-				background: $white;
-				border-radius: 50%;
+				max-width: 100px;
 			}
 		}
 	}
@@ -2355,4 +2359,265 @@ img {
 			animation: leafAniamtion 8s ease-in infinite;
 		}
 	}
+}
+
+// product-single
+
+.shop-single-section {
+	border-top: 10px solid #010101;
+	background: $section-bg;
+
+	/*** product slider ***/
+	.product-single-img {
+
+		.owl-nav [class*=owl-] {
+			position: absolute;
+			left: 10px;
+			top: 46%;
+			transform: translateY(-50%);
+			opacity: 0;
+			visibility: hidden;
+			width: 50px;
+			height: 50px;
+			background: $section-bg;
+			border: 0;
+			border-radius: 50%;
+			transition: all .3s;
+			color: $white;
+
+			&.owl-next {
+				left: auto;
+				right: 10px;
+			}
+		}
+
+		.item {
+			img {
+				border: 1px solid #ebebeb;
+			}
+		}
+
+		.product-thumbnil-active {
+			margin-top: 15px;
+
+			img {
+				border: 1px solid #ebebeb;
+			}
+
+			.owl-nav {
+				display: none;
+			}
+		}
+
+		.item {
+			img {
+				border-radius: 10px;
+			}
+		}
+
+		&:hover {
+			.owl-nav [class*=owl-] {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+
+	.product-details {
+		padding-left: 20px;
+		padding-right: 0;
+
+		@media (max-width:991px) {
+			padding-left: 0px;
+			padding-top: 30px;
+		}
+
+		h2 {
+			margin-bottom: 30px;
+			color: $white;
+		}
+
+
+		.pro-single-btn {
+			max-width: 328px;
+
+			@media (max-width:575px) {
+				max-width: 280px;
+			}
+
+			h3 {
+				text-align: center;
+			}
+
+			.quantity {
+				top: 0;
+				position: relative;
+				display: inline-block;
+				border: 3px solid #010924;
+				border-radius: 5px;
+				flex-basis: 20%;
+				margin-bottom: 5px;
+
+				@media (max-width:575px) {
+					margin-right: 20px;
+				}
+
+				&::before {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					width: 100px;
+					height: 40px;
+					background: #000000;
+					content: "";
+					color: $white;
+				}
+
+				input {
+					width: 320px;
+					background: transparent;
+					padding: 15px 35px;
+					text-align: center;
+					font-size: 20px;
+					font-weight: 400;
+					border: none;
+					position: relative;
+					border: 0;
+					color: $white;
+
+					@media (max-width:575px) {
+						max-width: 280px;
+					}
+				}
+
+				.qtybutton {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 20px;
+					height: 40px;
+					width: 40px;
+					text-align: center;
+					line-height: 37px;
+					font-size: 25px;
+					cursor: pointer;
+					border: 1px solid #010924;
+					border-radius: 50%;
+					color: $white;
+				}
+
+				.qtybutton.inc {
+					right: 20px;
+					left: auto;
+				}
+			}
+
+			span {
+				display: block;
+				margin-bottom: 30px;
+				font-weight: 700;
+			}
+
+		}
+
+		.buy-btn {
+			.theme-btn {
+				padding: 10px 50px;
+				width: 100%;
+				text-align: center;
+
+				@media(max-width:575px) {
+					padding: 15px 20px;
+				}
+			}
+		}
+
+	}
+}
+
+.details-note {
+	text-align: center;
+	padding-top: 15px;
+}
+
+// contact-page
+
+.contact-page {
+	border-top: 10px solid #010101;
+	padding-top: 80px;
+
+	.footer-wrap {
+		position: relative;
+		max-width: 1800px;
+		margin: 0 auto;
+
+		.shape1,
+		.shape2 {
+			position: relative;
+			margin-bottom: 20px;
+		}
+
+
+		.shape1 {
+			margin-bottom: 50px;
+		}
+
+	}
+
+	.footer-top .newslatter-area input {
+		width: 300px;
+
+		@media (max-width: 450px) {
+			width: 200px;
+		}
+
+		@media (max-width: 575px) {
+			width: 250px;
+		}
+		@media (max-width: 450px) {
+			width: 200px;
+		}
+	}
+
+	.row {
+		align-items: center;
+	}
+
+	.contact-wrap {
+		max-width: 600px;
+		margin: 0 auto;
+
+		.contact-title {
+			margin-bottom: 60px;
+
+			h2 {
+				text-transform: uppercase;
+			}
+		}
+
+		.form-group {
+			margin-bottom: 30px;
+
+			input,
+			textarea {
+				width: 100%;
+				height: 50px;
+				padding: 15px;
+				border: 1px solid $border-color;
+				border-radius: 3px;
+
+				&:focus {
+					outline: none;
+					border-color: $theme-primary-color;
+				}
+			}
+
+			textarea {
+				height: 130px;
+			}
+		}
+	}
+
 }

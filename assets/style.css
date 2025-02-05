@@ -762,6 +762,9 @@ img {
     padding: 0;
     padding-bottom: 20px;
   }
+  .site-header #navbar li.middle-logo img {
+    max-width: 180px;
+  }
   .site-header #navbar li.middle-logo a:before {
     display: none;
   }
@@ -1545,7 +1548,7 @@ img {
   animation: bounce 3s linear infinite;
 }
 .hero-area .hero-img .main-img img {
-  width: 600px;
+  width: 650px;
 }
 .hero-area .hero-img .shape1 {
   position: absolute;
@@ -1560,7 +1563,6 @@ img {
 }
 .hero-area .hero-img .shape1 img {
   width: 100px;
-  animation: leafAniamtion 8s ease-in infinite;
 }
 .hero-area .hero-img .shape2 {
   position: absolute;
@@ -1634,6 +1636,9 @@ img {
 .features-area .features-wrap .features-item .features-img {
   margin-bottom: 20px;
 }
+.features-area .features-wrap .features-item .features-img img {
+  max-width: 280px;
+}
 .features-area .features-wrap .features-item .features-text h3 {
   color: #fff;
 }
@@ -1659,8 +1664,7 @@ img {
   }
 }
 .features-area .features-wrap .left-shape img {
-  background: #fff;
-  border-radius: 50%;
+  max-width: 100px;
 }
 .features-area .features-wrap .right-shape {
   position: absolute;
@@ -1674,8 +1678,7 @@ img {
   }
 }
 .features-area .features-wrap .right-shape img {
-  background: #fff;
-  border-radius: 50%;
+  max-width: 100px;
 }
 
 .cta-area .cta-img {
@@ -2067,4 +2070,222 @@ img {
   left: -50px;
   bottom: 0;
   animation: leafAniamtion 8s ease-in infinite;
+}
+
+.shop-single-section {
+  border-top: 10px solid #010101;
+  background: #135541;
+  /*** product slider ***/
+}
+.shop-single-section .product-single-img .owl-nav [class*=owl-] {
+  position: absolute;
+  left: 10px;
+  top: 46%;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+  background: #135541;
+  border: 0;
+  border-radius: 50%;
+  transition: all 0.3s;
+  color: #fff;
+}
+.shop-single-section .product-single-img .owl-nav [class*=owl-].owl-next {
+  left: auto;
+  right: 10px;
+}
+.shop-single-section .product-single-img .item img {
+  border: 1px solid #ebebeb;
+}
+.shop-single-section .product-single-img .product-thumbnil-active {
+  margin-top: 15px;
+}
+.shop-single-section .product-single-img .product-thumbnil-active img {
+  border: 1px solid #ebebeb;
+}
+.shop-single-section .product-single-img .product-thumbnil-active .owl-nav {
+  display: none;
+}
+.shop-single-section .product-single-img .item img {
+  border-radius: 10px;
+}
+.shop-single-section .product-single-img:hover .owl-nav [class*=owl-] {
+  opacity: 1;
+  visibility: visible;
+}
+.shop-single-section .product-details {
+  padding-left: 20px;
+  padding-right: 0;
+}
+@media (max-width: 991px) {
+  .shop-single-section .product-details {
+    padding-left: 0px;
+    padding-top: 30px;
+  }
+}
+.shop-single-section .product-details h2 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.shop-single-section .product-details .pro-single-btn {
+  max-width: 328px;
+}
+@media (max-width: 575px) {
+  .shop-single-section .product-details .pro-single-btn {
+    max-width: 280px;
+  }
+}
+.shop-single-section .product-details .pro-single-btn h3 {
+  text-align: center;
+}
+.shop-single-section .product-details .pro-single-btn .quantity {
+  top: 0;
+  position: relative;
+  display: inline-block;
+  border: 3px solid #010924;
+  border-radius: 5px;
+  flex-basis: 20%;
+  margin-bottom: 5px;
+}
+@media (max-width: 575px) {
+  .shop-single-section .product-details .pro-single-btn .quantity {
+    margin-right: 20px;
+  }
+}
+.shop-single-section .product-details .pro-single-btn .quantity::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 40px;
+  background: #000000;
+  content: "";
+  color: #fff;
+}
+.shop-single-section .product-details .pro-single-btn .quantity input {
+  width: 320px;
+  background: transparent;
+  padding: 15px 35px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  position: relative;
+  border: 0;
+  color: #fff;
+}
+@media (max-width: 575px) {
+  .shop-single-section .product-details .pro-single-btn .quantity input {
+    max-width: 280px;
+  }
+}
+.shop-single-section .product-details .pro-single-btn .quantity .qtybutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 37px;
+  font-size: 25px;
+  cursor: pointer;
+  border: 1px solid #010924;
+  border-radius: 50%;
+  color: #fff;
+}
+.shop-single-section .product-details .pro-single-btn .quantity .qtybutton.inc {
+  right: 20px;
+  left: auto;
+}
+.shop-single-section .product-details .pro-single-btn span {
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+.shop-single-section .product-details .buy-btn .theme-btn {
+  padding: 10px 50px;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 575px) {
+  .shop-single-section .product-details .buy-btn .theme-btn {
+    padding: 15px 20px;
+  }
+}
+
+.details-note {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.contact-page {
+  border-top: 10px solid #010101;
+  padding-top: 80px;
+}
+.contact-page .footer-wrap {
+  position: relative;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.contact-page .footer-wrap .shape1,
+.contact-page .footer-wrap .shape2 {
+  position: relative;
+  margin-bottom: 20px;
+}
+.contact-page .footer-wrap .shape1 {
+  margin-bottom: 50px;
+}
+.contact-page .footer-top .newslatter-area input {
+  width: 300px;
+}
+@media (max-width: 450px) {
+  .contact-page .footer-top .newslatter-area input {
+    width: 200px;
+  }
+}
+@media (max-width: 575px) {
+  .contact-page .footer-top .newslatter-area input {
+    width: 250px;
+  }
+}
+@media (max-width: 450px) {
+  .contact-page .footer-top .newslatter-area input {
+    width: 200px;
+  }
+}
+.contact-page .row {
+  align-items: center;
+}
+.contact-page .contact-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-page .contact-wrap .contact-title {
+  margin-bottom: 60px;
+}
+.contact-page .contact-wrap .contact-title h2 {
+  text-transform: uppercase;
+}
+.contact-page .contact-wrap .form-group {
+  margin-bottom: 30px;
+}
+.contact-page .contact-wrap .form-group input,
+.contact-page .contact-wrap .form-group textarea {
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid #222224;
+  border-radius: 3px;
+}
+.contact-page .contact-wrap .form-group input:focus,
+.contact-page .contact-wrap .form-group textarea:focus {
+  outline: none;
+  border-color: #FF8900;
+}
+.contact-page .contact-wrap .form-group textarea {
+  height: 130px;
 }/*# sourceMappingURL=style.css.map */
