@@ -137,6 +137,37 @@
     }
 
 
+
+    /*------------------------------------------
+        = Header shopping cart toggle
+    -------------------------------------------*/
+    if ($(".mini-cart").length) {
+        var cartToggleBtn = $(".cart-toggle-btn");
+        var cartContent = $(".mini-cart-content");
+        var cartContent2 = $(".header-right");
+        var cartCloseBtn = $(".mini-cart-close");
+        var body = $("body");
+
+        cartToggleBtn.on("click", function (e) {
+            cartContent.toggleClass("mini-cart-content-toggle");
+            cartContent2.toggleClass("active");
+            e.stopPropagation();
+        });
+
+        cartCloseBtn.on("click", function (e) {
+            cartContent.removeClass("mini-cart-content-toggle");
+            cartContent2.removeClass("active");
+            e.stopPropagation();
+        });
+
+        body.on("click", function () {
+            cartContent.removeClass("mini-cart-content-toggle");
+            cartContent2.removeClass("active");
+        }).find(cartContent).on("click", function (e) {
+            e.stopPropagation();
+        });
+    }
+    
     /*------------------------------------------
         = WOW ANIMATION SETTING
     -------------------------------------------*/
